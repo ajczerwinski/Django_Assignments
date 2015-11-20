@@ -1,0 +1,17 @@
+<html>
+<head>
+<title> Welcome to my first Django App</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+<body>
+  <h1> Welcome to my first Django App </h1>
+  {% if users %}
+  <ul>
+  {% for user in users %}
+  <li>{{ user.id }} - {{ user.content }}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+</body>
+</html>

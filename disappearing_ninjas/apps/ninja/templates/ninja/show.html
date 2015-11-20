@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  {% load staticfiles %}
+  {% if color == 'purple' %}
+  <img src = '{% static "ninja/purple.jpg"  %}'>
+  {% elif color == 'blue' %}
+  <img src = '{% static "ninja/blue.jpg"  %}'>
+  {% elif color == 'orange' %}
+  <img src = '{% static "ninja/orange.jpg"  %}'>
+  {% elif color == 'red' %}
+  <img src = '{% static "ninja/red.jpg"  %}'>
+  {% else %}
+  <img src = '{% static "ninja/meganfox.jpg"  %}'>
+  {% endif %}
+</body>
+</html>
