@@ -1,0 +1,20 @@
+Interest.objects.all()
+
+User.objects.all()
+
+interest<insert new user id here> = Interest(name="<insert name here>", created_at=datetime.now())
+
+user<insert new user id here> = User(first_name="Bob", last_name="Smith", age=67, occupation="Baller", created_at=datetime.now(), interest=Interest.objects.get(id=<insert object id here>))
+
+Interest.objects.get(id=1).name
+
+User.objects.filter(first_name__startswith="J")
+
+User.objects.filter(age__gt=25)
+
+User.objects.filter(created_at__year = 2015)
+
+user = User.objects.get(id=5)
+user.age = 26
+print user.age
+

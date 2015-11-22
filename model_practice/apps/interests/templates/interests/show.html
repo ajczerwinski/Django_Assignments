@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Retrieve and Display</title>
+</head>
+<body>
+	<h1>Users and Interests</h1>
+	{% if users %}
+	<ol>
+		{% for user in users %}
+		<li><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a><br><br>Interest: {{user.interest.name}}</li><br>
+		{% endfor %}
+	</ol>
+	{% endif %}
+	
+</body>
+</html>
