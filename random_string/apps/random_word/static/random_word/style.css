@@ -1,0 +1,14 @@
+#wrapper {
+	width: 600px;
+	margin: 100px 0px 0px 200px;
+}
+#string_box {
+	margin-left: 190px;
+	border: 2px solid black;
+	width: 220px;
+	height: 40px;
+	padding: 10px 10px 30px 30px;
+}
+#button {
+	margin: 20px 0px 0px 265px;
+}

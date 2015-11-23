@@ -1,0 +1,14 @@
+button{
+	background-color: #2E77EB;
+	color: white;
+}
+
+div {
+	width: 500px;
+	padding: 20px;
+	border: 3px solid black;
+}
+
+#top_message {
+	background-color: #B4D8A8;	
+}
