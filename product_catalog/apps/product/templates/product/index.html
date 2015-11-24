@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Products Catalog</title>
+</head>
+<body>
+	<h1>Trader's Store</h1>
+	<h2>Product Listing:</h2>
+	{% if products %}
+	<table>
+		<tr>
+			<td>Manufacturer</td>
+			<td>Product Name</td>
+			<td>Price</td>
+			<td>Date Added</td>
+			<td>Action</td>
+		</tr>
+		{% for product in products %}
+		<tr>
+			<td>{{product.manufacturer.name}}</td>
+			<td><a href="/products/{{product.id}}">{{product.name}}</a></td>
+			<td>${{product.price}}</td>
+			<td>{{product.created_at}}</td>
+			<td><a href="/products/{{product.id}}">Edit</a> <a href="/delete/{{product.id}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+	{% endif %}
+	</table><br><br><br>
+
+	<form action="{% url 'create' %}" method="post">
+		{% csrf_token %}
+		Manufacturer/Brand: <select name="manu_name">
+			<option value="Kenneth Cole">Kenneth Cole</option>
+			<option value="Gap">Gap</option>
+			<option value="Ruby Project">Rudy Project</option>
+			<option value="Samsung">Samsung</option>
+		</select><br><br>
+		<label for="name">Product Name:</label>
+		<input type="text" name="name" id="name"><br><br>
+		<label for="price">Price ($):</label>
+		<input type="text" name="price"><br>
+		Description:<textarea rows ="10" cols"50" name="description"></textarea><br>
+		<button>Add</button>
+	</form>
+</body>
+</html>
